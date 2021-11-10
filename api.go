@@ -7,7 +7,7 @@ import (
 
 // API is the main api data structure
 type API struct {
-	EndPoint        *url.URL
+	endPoint        *url.URL
 	Client          *http.Client
-	Username, Token string
+	username, token string
 }

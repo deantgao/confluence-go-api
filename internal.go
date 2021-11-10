@@ -21,9 +21,9 @@ func NewAPI(location string, username string, token string) (*API, error) {
 	}
 
 	a := new(API)
-	a.EndPoint = u
-	a.Token = token
-	a.Username = username
+	a.endPoint = u
+	a.token = token
+	a.username = username
 
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: false},
@@ -44,7 +44,7 @@ func NewAPIWithClient(location string, client *http.Client) (*API, error) {
 	}
 
 	a := new(API)
-	a.EndPoint = u
+	a.endPoint = u
 	a.Client = client
 
 	return a, nil
